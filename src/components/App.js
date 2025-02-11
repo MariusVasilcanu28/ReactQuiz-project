@@ -163,7 +163,6 @@ function reducer(state, action) {
 export default function App() {
   const [
     {
-      questions,
       status,
       index,
       answers,
