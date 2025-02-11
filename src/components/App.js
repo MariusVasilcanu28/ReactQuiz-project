@@ -187,7 +187,7 @@ export default function App() {
   useEffect(() => {
     const quizApi = async function () {
       try {
-        const res = await fetch(API_URL);
+        const res = await fetch(process.env.REACT_APP_API_KEY);
         const data = await res.json();
         dispatch({ type: "dataReceived", payload: data.questions });
       } catch (err) {
