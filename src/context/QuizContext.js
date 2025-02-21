@@ -173,7 +173,7 @@ function QuizProvider({ children }) {
   useEffect(() => {
     const quizApi = async function () {
       try {
-        const res = await fetch(REACT_APP_QUIZ_URL);
+        const res = await fetch(process.env.REACT_APP_API_KEY);
         const data = await res.json();
         dispatch({ type: "dataReceived", payload: data.questions });
       } catch (err) {
