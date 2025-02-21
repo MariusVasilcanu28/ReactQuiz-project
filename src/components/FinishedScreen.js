@@ -1,13 +1,10 @@
 // src/components/FinishedScreen.js
 import React from "react";
+import { useQuiz } from "../context/QuizContext";
 
-function FinishedScreen({
-  points,
-  maxPossiblePoints,
-  quizLevel,
-  highscores,
-  dispatch,
-}) {
+function FinishedScreen() {
+  const { points, maxPossiblePoints, quizLevel, highscores, dispatch } =
+    useQuiz();
   // Define the same LEVELS object to convert quizLevel back to its string key.
   const LEVELS = {
     ALL: 0,

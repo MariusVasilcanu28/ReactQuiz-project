@@ -6,8 +6,6 @@ const initialState = {
 };
 
 function reducer(state, action) {
-  console.log(state, action);
-
   switch (action.type) {
     case "inc":
       return {

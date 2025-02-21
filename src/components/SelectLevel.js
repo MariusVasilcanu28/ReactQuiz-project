@@ -1,4 +1,7 @@
-function SelectLevel({ dispatch, quizLevel, levels }) {
+import { useQuiz } from "../context/QuizContext";
+
+function SelectLevel() {
+  const { dispatch, levels } = useQuiz();
   return (
     <>
       <div className="level-box">
@@ -8,7 +11,6 @@ function SelectLevel({ dispatch, quizLevel, levels }) {
               className="radio-btn"
               onClick={() => {
                 dispatch({ type: "setLevel", payload: levels[key] });
-                console.log(levels[key]);
               }}
             />
             {key}

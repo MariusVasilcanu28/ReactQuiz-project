@@ -1,4 +1,9 @@
-function NumberOfQuestions({ maxNumQuestions, numQuestions, dispatch }) {
+import { useQuiz } from "../context/QuizContext";
+
+function NumberOfQuestions() {
+  const { filteredQuestions, numQuestions, dispatch } = useQuiz();
+  const maxNumQuestions = filteredQuestions.length;
+
   return (
     <div className="form-group-inline mx-30">
       <label htmlFor="numQuestions" className="form-label">
